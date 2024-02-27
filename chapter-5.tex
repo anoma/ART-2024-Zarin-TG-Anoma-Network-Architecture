@@ -1,1 +1,70 @@
-\section{P2P Software Architecture}
+% Explain that we use the PODS architecture with different domains in the P2P overlay and heterogeneous protocols. Big chunk of this info can be copied from the specs, my networking review PR, and from the P2P paper. Of course, in this report we'll dive into more details. Also, do not forget to refer to the functional and non-functional requirements and the system model from the previous chapters. 
+\section{P2P Network Architecture}
+
+% Briefly define the main components and their relationships: nodes, connections/links, domains, messaging, intra-domain protocols, and inter-domain protocols
+\subsection{Overview}
+
+% Talk about nodes in a bit more depth. Explain what nodes are in our network architecture by describing their characteristics (crypto IDs and heterogeneous preferences)
+\subsection{Nodes}
+
+% Explain our "opaque cryptographic compositional identity system" 
+\subsubsection{Cryptographic Identities}
+
+% Explain that nodes also have (multiple) physical addresses to send and receive messages over the wire
+\subsubsection{Addresses}
+
+% Explain that nodes can express their preferences whom to communicate with and how to communicate. 
+\subsubsection{Preferences}
+
+% Explain what we mean by connections/links in the overlay and underlay 
+\subsection{Connections}
+
+% Mainly talk cryptographic IDs in routing tables (conceptual links)
+\subsubsection{Overlay Connections}
+
+% Mainly talk about IP addresses (physical links)
+\subsubsection{Underlay Connections}
+
+% Explain what a domain is, and that nodes can be part of multiple domains. 
+\subsection{Domains}
+
+% Explain the most important intra-domain protocols, in which all nodes in a domain should participate. 
+\subsection{Intra-Domain Protocols}
+
+% Explain the bootstrapping procedures, but also that different domains can have different membership rules. 
+\subsubsection{Domain Membership}
+
+% Explain how nodes determine a route towards one or multiple locations within the domain. Emphasize the role of trust and preferences/constraints when selecting peers. 
+\subsubsection{Intra-Domain Routing}
+
+% Explain how data is actually transmitted through the route (mainly focussing on the transport protocols). 
+\subsubsection{Data Transmission}
+
+% Explain the data storage and retrieval procedures
+\subsubsection{Data Storage and Retrieval}
+
+% Explain how nodes maintain the domain overlay (this includes the peer discovery protocol).
+\subsubsection{Topology Maintenance}
+
+
+% Explain that we collect measurements that are then used to calculate trust values for peers and for groups of peers (domains).  
+\subsubsection{Trust and Reputation Management}
+
+
+\subsection{Inter-Domain Protocols}
+
+% Explain how nodes determine a route towards one or multiple locations between different the domains. Again, emphasize the role of trust and preferences/constraints when selecting peers. 
+\subsubsection{Inter-Domain Routing}
+
+% Explain our TAPS protocol
+\subsubsection{Trust-Aware Peer Sampling}
+
+% Explain our TAC protocol
+\subsubsection{Trust-Aware Clustering}
+
+% Explain our URPS protocol
+\subsubsection{Uniform Random Peer Sampling}
+
+% Explain our BF protocol
+\subsubsection{Bloom-and-Flip}
+

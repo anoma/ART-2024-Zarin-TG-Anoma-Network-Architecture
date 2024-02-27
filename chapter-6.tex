@@ -1,1 +1,51 @@
-\section{Related Work}
+% Explain our SW architecture.
+\section{P2P Software Architecture}
+
+% First say that we use the actor model and explain why that's a useful model for our SW architecture. Explain that in our model we have machines, engines, engine instances, and that engines maintain state that can be manipulated through message passing. Don't introduce the exact machines or engines yet. 
+\subsection{Actor Model}
+
+% define a machine
+\subsubsection{Machines}
+
+% define an engine
+\subsubsection{Engines}
+
+% emphasize the difference between engine and engine instance
+\subsubsection{Engine Instances}
+
+% explain that engines communicate with each other through message passing. Backlink to the fact that messages can contain preferences, and explain delivery semantics. 
+\subsubsection{Messages}
+
+% Introduce the most relevant machines for Anoma's P2P layer, starting with the Networking Machine. Explain the main responsibilities of its engines and what protocols from the Network Architecture they implement. Don't forget to hihglight the message flows between the engines when explaining the protocol implementation. Note that these engines come from the current v1 specs. 
+\subsection{Anoma's Networking Machine}
+
+% Don't forgot to mention that inter-node message passing / data transmission goes through the router, and that the router's external ID is the equivalent of a node's cryptographic ID in the network architecture. 
+\subsubsection{Router Engine}
+
+% Introduce which network transport protocols we support
+\subsubsection{Transport Engine}
+
+\subsubsection{Network Identity Store Engine}
+
+\subsubsection{Publish-Subscribe Engine}
+
+\subsubsection{Storage Engine}
+
+% Do the same, but now for the Control Machine
+\subsection{Anoma's Control Machine}
+
+% Emphasize that the static configurations cannot be changed by other engines, only by the user. 
+\subsubsection{Static Configuration Engine}
+
+% Emphasize that the dynamic configurations can be changed by other engines and what that is useful. Provide a concrete example to make it more tangible. 
+\subsubsection{Dynamic Configuration Engine}
+
+% Don't forgot to mention that reason why we decouple measurements from protocols (upgradability, backwards compatibility, trust, etc).  
+\subsubsection{Measurements Engine}
+
+
+\subsubsection{Control Engine}
+
+
+
+
